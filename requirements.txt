@@ -1,0 +1,11 @@
+Django==3.2
+djangorestframework==3.12.2
+django-crispy-forms==1.9.2
+requests==2.22.0
+spacy>=2.3.2,<3.0.0
+python_docx==0.8.10
+tweepy==3.9.0
+docx==0.2.4
+django-crispy-forms==1.14.0
+https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-2.3.1/en_core_web_sm-2.3.1.tar.gz#egg=en_core_web_sm
+
