@@ -17,7 +17,7 @@ with open('assets/CrisisLexRec.txt', 'r') as file:
 			lexicon = file.read().splitlines()
 
 # Test data
-# {"text":"Indians spent over $71 billion on clothes in 2018. A flood hurricane declared in Paris. Friday, FEMA. Hurricane Katrina."}
+# {"text":"Floods are one of the most common hazards in the United States. They occur when land that is normally dry experiences an overflow of water."}
 
 # Functions
 def get_event_format(entities):
@@ -45,7 +45,7 @@ def get_event_format(entities):
 
 # views
 def index(request):
-    return HttpResponse("Hello, world. You're at the API index : get_wwww_event(text) => WHAT-WHERE-WHO-WHEN situation event as a dict.")
+    return HttpResponse("Hey, You're at the API index : get_4ww_event(text) => WHAT-WHERE-WHO-WHEN")
 
 
 @api_view(['GET'])

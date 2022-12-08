@@ -27,8 +27,6 @@ lexicon = []
 with open('assets/CrisisLexRec.txt', 'r') as file:
 			lexicon = file.read().splitlines()
 
-# ----------------------------------------------------------------------------------------
-
 # Functions
 def get_event_format(entities):
 	event = {'WHERE': [], 'WHO': [], 'WHEN': [], 'WHAT':entities['WHAT']}
@@ -50,10 +48,8 @@ def get_event_format(entities):
 		event['WHEN'].extend(entities['TIME'])
 	return event
 
-# ----------------------------------------------------------------------------------------
 
 # Main Views 
-
 def home(request):
 	doc = nlp(default_text)
 	entities_html = displacy.render(doc, style="ent", minify=True)
@@ -168,10 +164,7 @@ def extract_events_from_twitter(request):
 	return render(request, 'ner4w/fromtwitter.html', context)
 
 
-# ---------------------------------------------------------------------------
-
 # Profile views 
-
 @login_required(login_url='login')
 def profile(request):
 	reports = Report.objects.all()
